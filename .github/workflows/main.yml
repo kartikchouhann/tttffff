@@ -1,0 +1,13 @@
+- name: Install Terraform
+  uses: hashicorp/terraform-github-actions@v1
+  with:
+    tf_version: 0.15.0
+- name: Set up GCP credentials
+  uses: google-auth/setup-gcloud@v2
+  with:
+    service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+- name: Apply Terraform
+  uses: hashicorp/terraform-github-actions@v1
+  with:
+    tf_action: apply
+    tf_dir: ../../main.tf
