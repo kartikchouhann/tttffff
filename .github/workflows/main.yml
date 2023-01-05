@@ -12,7 +12,7 @@ jobs:
       with:
         terraform_version: 0.14.4
     - name: Configure GCP credentials
-      uses: google-actions/configure-gcloud@v2
+      uses: google-actions/setup-gcloud@v2
       with:
         service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
         project_id: ite-project-370218
