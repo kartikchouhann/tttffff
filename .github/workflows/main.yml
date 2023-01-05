@@ -15,7 +15,7 @@ jobs:
       uses: google-actions/configure-gcloud@v2
       with:
         service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
-        project_id: my-gcp-project
+        project_id: ite-project-370218
     - name: Plan
       run: terraform plan
     - name: Apply
